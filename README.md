@@ -15,8 +15,27 @@
    git clone https://github.com/Yanchikik/myproject.git
    cd myproject
 2. Установите зависимости: 
-   pip install -r requirements.txt 
-   (Если возникает ошибка доступа: pip install --user -r requirements.txt)
+   Использование виртуального окружения (рекомендуется)
+   Linux / macOS:
+   # Убедимся, что venv установлен  
+   sudo apt install python3-venv  
+   # Создаем виртуальное окружение  
+   python3 -m venv venv  
+   # Активируем окружение  
+   source venv/bin/activate  
+   # Устанавливаем зависимости  
+   pip install -r requirements.txt  
+
+   Windows:
+   # Создаем виртуальное окружение  
+   python -m venv venv  
+   # Активируем его  
+   venv\Scripts\activate  
+   # Устанавливаем зависимости  
+   pip install -r requirements.txt  
+   # Если возникает ошибка доступа  
+   pip install --user -r requirements.txt  
+
 3. Запустите приложение: 
    streamlit run app.py 
 ## 📁 Структура репозитория
