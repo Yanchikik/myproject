@@ -14,10 +14,10 @@
    ```bash
    git clone https://github.com/Yanchikik/myproject.git
    cd myproject
-## 🔹 2. Установка зависимостей  
+2. Установка зависимостей  
 Рекомендуется использовать виртуальное окружение для изоляции зависимостей.  
 
-### 🖥 Для Windows  
+🖥 Для Windows  
 ```sh
 # Создаем виртуальное окружение  
 python -m venv venv  
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 pip install --user -r requirements.txt  
 ```
 
-### 💻 Для Linux / macOS  
+💻 Для Linux / macOS  
 ```sh
 # Убедимся, что venv установлен  
 sudo apt install python3-venv  
