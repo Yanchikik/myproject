@@ -24,13 +24,15 @@ def analysis_and_model_page():
         st.warning(f"Не удалось загрузить данные через ucimlrepo. Ошибка: {e}")
         st.info("Попытка загрузить данные из локального CSV-файла...")
 
-        # Загрузка данных из локального CSV-файла
-        try:
-            data = pd.read_csv("data/predictive_maintenance.csv")
-            st.success("Данные успешно загружены из локального CSV-файла.")
-        except Exception as e:
-            st.error(f"Не удалось загрузить данные из локального файла. Ошибка: {e}")
-            st.stop()  # Остановка приложения, если данные не загружены
+      # Загрузка данных из нового пути к CSV-файлу
+    try:
+    data = pd.read_csv(r"C:\Users\user\Desktop\cifrkafedra\project\data\ai4i2020.csv")  # Указан новый путь к файлу
+    st.success("Данные успешно загружены из файла ai4i2020.csv")
+    except Exception as e:
+    st.error(f"Не удалось загрузить данные из файла ai4i2020.csv. Ошибка: {e}")
+    st.error("Убедитесь, что файл находится по пути: C:\\Users\\user\\Desktop\\cifrkafedra\\project\\data\\ai4i2020.csv")
+    st.stop()  # Остановка приложения, если данные не загружены
+
 
     # Предобработка данных
     st.header("Предобработка данных")
