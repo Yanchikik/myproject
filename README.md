@@ -62,4 +62,5 @@ pip install -r requirements.txt
 
 ## 🎥 Видео-демонстрация  
 
-[Скачать видео](https://github.com/Yanchikik/myproject/raw/master/video.mp4)
+[Скачать видео](https://github.com/Yanchikik/myproject/raw/refs/heads/master/video/video.mp4)
+
