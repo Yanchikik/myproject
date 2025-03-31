@@ -62,4 +62,5 @@ pip install -r requirements.txt
 
 ## 🎥 Видео-демонстрация  
 
-🔗 [Смотреть видео](video.mp4)  
+[Скачать видео](https://github.com/ВАШ_ЛОГИН/ВАШ_РЕПОЗИТОРИЙ/raw/master/video.mp4)
+<video src="https://ВАШ_ЛОГИН.github.io/ВАШ_РЕПОЗИТОРИЙ/video.mp4" controls width="100%"></video>
