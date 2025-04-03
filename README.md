@@ -50,7 +50,8 @@ pip install -r requirements.txt
  
 
 3. Запустите приложение: 
-   streamlit run app.py 
+```sh
+streamlit run app.py 
 ## 📁 Структура репозитория
 
 - **`app.py`** – основной файл приложения Streamlit.  
