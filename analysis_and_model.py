@@ -24,14 +24,27 @@ def analysis_and_model_page():
         st.warning(f"Не удалось загрузить данные через ucimlrepo. Ошибка: {e}")
         st.info("Попытка загрузить данные из локального CSV-файла...")
 
-      # Загрузка данных из нового пути к CSV-файлу
-    try:
-    data = pd.read_csv(r"C:\Users\user\Desktop\cifrkafedra\project\data\ai4i2020.csv")  # Указан новый путь к файлу
-    st.success("Данные успешно загружены из файла ai4i2020.csv")
-    except Exception as e:
-    st.error(f"Не удалось загрузить данные из файла ai4i2020.csv. Ошибка: {e}")
-    st.error("Убедитесь, что файл находится по пути: C:\\Users\\user\\Desktop\\cifrkafedra\\project\\data\\ai4i2020.csv")
-    st.stop()  # Остановка приложения, если данные не загружены
+      # 2. Попытка загрузить из локального файла
+        try:
+            # Путь относительно расположения скрипта
+            data_dir = os.path.join(os.path.dirname(__file__), 'data')
+            csv_path = os.path.join(data_dir, 'ai4i2020.csv')
+            
+            if os.path.exists(csv_path):
+                data = pd.read_csv(csv_path)
+                st.success(f"Данные успешно загружены из локального файла: {csv_path}")
+            else:
+                st.error(f"Файл не найден по пути: {csv_path}")
+                st.info("""
+                Для работы приложения необходимо:
+                1. Создать папку 'data' в той же директории, где находится app.py
+                2. Поместить туда файл 'ai4i2020.csv'
+                """)
+                st.stop()
+                
+        except Exception as e:
+            st.error(f"Ошибка при загрузке локального файла: {e}")
+            st.stop()
 
 
     # Предобработка данных
